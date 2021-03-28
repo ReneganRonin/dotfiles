@@ -1,0 +1,21 @@
+font=FantasqueSansMono Nerd Font 10
+
+[urgency=low]
+border-color=#00f704
+
+[urgency=normal]
+border-color=#d08770
+font=FantasqueSansMono Nerd Font 10
+
+[urgency=high]
+background-color=#bf616a
+border-color=#bf616a
+default-timeout=0
+
+[app-name="Spotify"]
+background-color=#000000
+border-color=#00f74e
+
+[app-name="Firefox Developer Edition"]
+background-color=#000000
+border-color=#6b00f7
