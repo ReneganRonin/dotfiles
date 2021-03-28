@@ -1,0 +1,6 @@
+[submodule "nvim-ronin"]
+	path = nvim-ronin
+	url = git@github.com:ReneganRonin/nvim-ronin.git
+[submodule "nvim"]
+	path = nvim
+	url = git@github.com:ReneganRonin/nvim-ronin.git
