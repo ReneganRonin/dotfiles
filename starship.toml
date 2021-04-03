@@ -3,8 +3,8 @@
 add_newline = true
 
 format="""
-[┌─── ](bold #4fb0ff)$username[@](#ffff00)$hostname$directory $julia$python$conda$nix$rust$node$elm$lua$java$golang$erlang$package$git_branch$git_commit$git_state$git_status$hg_branch$docker_context$cmake$jobs$time
-[└](bold #4fb0ff)$character
+[┌─── ](#f9f9f2)$username[@](#ffffa5)$hostname$directory $julia$python$conda$nix$rust$node$elm$lua$java$golang$erlang$package$git_branch$git_commit$git_state$git_status$hg_branch$docker_context$cmake$jobs$time
+[└](#f9f9f2)$character
 """
 
 [battery]
@@ -30,9 +30,9 @@ threshold = 100
 style = "bold green"
 
 [character]
-success_symbol = "[](bold #4fb0ff)"  # nf-fa-angle_double_right
-error_symbol = "[](bold #ff2a00)"  # nf-fa-ban
-vicmd_symbol = "[](bold #ffaa00)"  # nf-fa-angle_double_left
+success_symbol = "[](#f9f9f2)"  # nf-fa-angle_double_right
+error_symbol = "[](#f1fa8c)"  # nf-fa-ban
+vicmd_symbol = "[](#dcacff)"  # nf-fa-angle_double_left
 
 [cmd_duration]
 style = "bold #c982ff"
@@ -74,7 +74,7 @@ format = "$all_status$ahead_behind"
 ssh_only = false
 format = "[$hostname]($style) "
 trim_at = ""
-style = "bold dimmed #9fe820"
+style = "bold #69ff94"
 disabled = false
 
 [julia]
@@ -116,7 +116,7 @@ style = "bright-white"
 disabled = false
 
 [username]
-style_user = "bold #4fb0ff"
+style_user = "bold #bd93f9"
 format = "[$user]($style)"
 show_always = true 
 
