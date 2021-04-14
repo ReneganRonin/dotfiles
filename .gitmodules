@@ -4,3 +4,6 @@
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:ReneganRonin/nvim-ronin.git
+[submodule "fish"]
+	path = fish
+	url = git@github.com:ReneganRonin/fish.git
