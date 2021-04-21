@@ -2,13 +2,33 @@
     "layer": "top",
     "position": "top",
     "modules-left": ["custom/media", "sway/workspaces"],
-	"modules-center": ["sway/window"],
-    "modules-right": ["custom/keyboard", "network", "battery", "pulseaudio", "clock", "custom/quit"],
+	"modules-center": ["wlr/taskbar"],
+    "modules-right": ["idle_inhibitor", "backlight","custom/keyboard", "network", "battery", "pulseaudio","tray",  "clock", "custom/quit"],
     "clock": {
         "format": "{:%H:%M}",
         "format-alt": "{:%a %b %d}",
         "tooltip": false
     },
+
+	"sway/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": " ",
+            "2": " ",
+            "3": "ﭮ",
+            "4": ""
+        },
+		"persistent_workspaces": {
+			"1": ["eDP-1"],
+			"2": ["eDP-1"],
+			"3": ["eDP-1"],
+			"4": ["eDP-1"],
+			"5": ["eDP-1"],
+			"6": ["eDP-1"],
+			"7": ["eDP-1"],
+			"8": ["eDP-1"],
+		}
+	},
     "network": {
         "format": "{ifname}",
         "format-wifi": "  {essid}",
@@ -27,6 +47,12 @@
         "interval": 1,
         "exec": "$HOME/.config/waybar/get_kbdlayout.sh"
     },
+	"backlight": {
+		"format-icons": ["ﯧ", "ﯦ"],
+        "on-scroll-up": "xbacklight -inc 1",
+        "on-scroll-down": "xbacklight -dec 1",
+		"format": "{percent}% {icon}"
+	},
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
@@ -43,11 +69,25 @@
         "scroll-step": 1,
         "on-click": "pavucontrol"
     },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
 
     "custom/quit": {
-        "format": "",
+        "format": "⏼ ",
         "on-click": "$HOME/scripts/powermenu.sh"
     },
+
+    "wlr/taskbar": {
+        "all-outputs": true,
+        "on-click": "activate",
+        "on-click-right": "minimize",
+        "on-click-middle": "close"
+    }
     
 }
 

@@ -9,20 +9,105 @@
 window#waybar {
     background: rgba(0,0,0,0.5);
     color:  #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
-#workspaces button:hover {
-    background: rgba(148, 252, 211, 0.2);
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces button#sway-workspace-1 {
+    background-color: #ffbe26;
+    color: #ffffff;
+    margin: 3px 3px 3px 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px 5px 5px 7px;
+}
+#workspaces button#sway-workspace-2 {
+    background-color: #26ff7d;
+    color: #ffffff;
+  	margin: 3px 3px 3px 0px;
+  	padding: 5px 7px 5px 5px;
+  	border-top-right-radius: 10px;
+  	border-bottom-right-radius: 10px;
+}
+
+#workspaces button#sway-workspace-3 {
+    background-color: #26a8ff;
+    color: #ffffff;
+    margin: 3px 3px 3px 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px 5px 5px 7px;
+}
+#workspaces button#sway-workspace-4 {
+    background-color: #f069c5;
+    color: #ffffff;
+  	margin: 3px 3px 3px 0px;
+  	padding: 5px 7px 5px 5px;
+  	border-top-right-radius: 10px;
+  	border-bottom-right-radius: 10px;
+}
+#workspaces button#sway-workspace-5 {
+    background-color: #7d5999;
+    color: #ffffff;
+    margin: 3px 3px 3px 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px 5px 5px 7px;
+}
+#workspaces button#sway-workspace-6 {
+    background-color: #bed4d1;
+    color: #454545;
+  	margin: 3px 3px 3px 0px;
+  	padding: 5px 7px 5px 5px;
+  	border-top-right-radius: 10px;
+  	border-bottom-right-radius: 10px;
+}
+#workspaces button#sway-workspace-7 {
+    background-color: #454545;
+    color: #ffffff;
+    margin: 3px 3px 3px 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px 5px 5px 7px;
+}
+#workspaces button#sway-workspace-8 {
+    background-color: #d4bebe;
+    color: #454545;
+  	margin: 3px 3px 3px 0px;
+  	padding: 5px 7px 5px 5px;
+  	border-top-right-radius: 10px;
+  	border-bottom-right-radius: 10px;
+}
+
+#workspaces button.focused#sway-workspace-1 {
+    background-color: #a1a1a1;
+}
+#workspaces button.focused#sway-workspace-2 {
+    background-color: #a1a1a1;
+}
+#workspaces button.focused#sway-workspace-3 {
+    background-color: #a1a1a1;
+}
+#workspaces button.focused#sway-workspace-4 {
+    background-color: #a1a1a1;
+}
+#workspaces button.focused#sway-workspace-5 {
+    background-color: #a1a1a1;
+}
+#workspaces button.focused#sway-workspace-6 {
+    background-color: #a1a1a1;
     color: #ffffff;
 }
-
-#workspaces button.focused {
-    background: rgba(0,0,0,0.5);
-    color: #94fcd3;
+#workspaces button.focused#sway-workspace-7 {
+    background-color: #a1a1a1;
 }
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
+#workspaces button.focused#sway-workspace-8 {
+    background-color: #a1a1a1;
+    color: #ffffff;
 }
 
 #battery {
@@ -32,26 +117,30 @@ window#waybar {
   color: #c5c8c6;
 }
 
+#backlight {
+  margin: 3px 3px 3px 0px;
+  padding: 5px 7px 5px 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #97bbef;
+  color: #FFF;
+}
 #custom-quit {
   margin: 3px 3px 3px 0px;
   padding: 5px 7px 5px 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  border-right: 2px solid #1d1f21;
-  border-top: 2px solid #1d1f21;
-  border-bottom: 2px solid #1d1f21;
-  background: #F00;
-  color: #FFF;
+  background: #ef97ca;
+  color: #ffffff;
 }
 
 #clock {
   margin: 3px 0px 3px 3px;
   padding: 5px;
-  color: #FFF;
-  background: #1d1f21;
+  background-color: #ac98e0;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  color: #c5c8c6;
+  color: #ffffff;
 }
 
 #custom-keyboard {
@@ -76,13 +165,30 @@ window#waybar {
   background: #1d1f21;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: #c5c8c6;
+  color: #ffffff;
+  background: #77f998;
 }
 
 #network {
-  background: #1d1f21;
-  color: #c5c8c6;
+  background: #efcd97;
+  color: #ffffff;
   margin: 3px 0px 3px 0px;
   padding: 5px;
   border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#idle_inhibitor {
+  margin: 3px 0px 3px 3px;
+  padding: 5px;
+  color: #FFF;
+  background: #1d1f21;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: #c5c8c6;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
 }
