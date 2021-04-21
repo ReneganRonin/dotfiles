@@ -7,7 +7,7 @@
                          "--history-file=no", 
                     	   "--trace-compile=/home/tricks/Developer/Julia/tracecompile.jl",
                          "-e", 
-                         "using Pkg; Pkg.instantiate(); using LanguageServer; using SymbolServer; depot_path = get(ENV, \"JULIA_DEPOT_PATH\", \"\");project_path = dirname(something(Base.current_project(pwd()), Base.load_path_expand(LOAD_PATH[2])));@info \"Running language server\" env=Base.load_path()[1] pwd() project_path depot_path\nserver = LanguageServer.LanguageServerInstance(stdin, stdout, project_path, depot_path);server.runlinter = true; run(server);"
+                         "using Pkg; Pkg.instantiate(); using LanguageServer; using StaticLint; using SymbolServer; depot_path = get(ENV, \"JULIA_DEPOT_PATH\", \"\");project_path = dirname(something(Base.current_project(pwd()), Base.load_path_expand(LOAD_PATH[2])));@info \"Running language server\" env=Base.load_path()[1] pwd() project_path depot_path\nserver = LanguageServer.LanguageServerInstance(stdin, stdout, project_path, depot_path);server.runlinter = true; run(server);"
                         ],
               "url": "https://github.com/julia-vscode/LanguageServer.jl",
               "highlightingModeRegex": "^Julia$"
