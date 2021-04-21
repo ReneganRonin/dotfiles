@@ -83,7 +83,7 @@
     },
 
     "wlr/taskbar": {
-        "all-outputs": true,
+        "all-outputs": false,
         "on-click": "activate",
         "on-click-right": "minimize",
         "on-click-middle": "close"

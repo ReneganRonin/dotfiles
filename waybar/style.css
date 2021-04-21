@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0);
     color:  #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -122,7 +122,7 @@ window#waybar.hidden {
   padding: 5px 7px 5px 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: #97bbef;
+  background: #639aeb;
   color: #FFF;
 }
 #custom-quit {
@@ -162,15 +162,14 @@ window#waybar.hidden {
 #pulseaudio {
   margin: 3px 3px 3px 0px;
   padding: 5px 7px 5px 5px;
-  background: #1d1f21;
+  background: #10cc5f;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   color: #ffffff;
-  background: #77f998;
 }
 
 #network {
-  background: #efcd97;
+  background: #ff9900;
   color: #ffffff;
   margin: 3px 0px 3px 0px;
   padding: 5px;
