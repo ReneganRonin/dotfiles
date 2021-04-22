@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "modules-left": ["sway/workspaces", "custom/workspaces"],
+    "modules-left": ["sway/workspaces", "custom/workspaces", "wlr/taskbar"],
 	"modules-center": ["custom/media"],
     "modules-right": ["idle_inhibitor", "backlight", "network", "battery", "pulseaudio","tray",  "clock", "custom/quit"],
     "clock": {
@@ -41,7 +41,7 @@
         "format": "{}",
         "exec": "$HOME/.config/waybar/get_workspaces.sh",
         "exec-if": "pgrep waybar",
-        "restart-interval": 1
+        "interval": 1
     },
     "custom/media": {
         "format": "{}",
@@ -95,7 +95,7 @@
         "on-click": "activate",
         "on-click-right": "minimize",
         "on-click-middle": "close",
-        "icon-size": 4
+        "icon-size": 23
     },
 
     "sway/window":{
