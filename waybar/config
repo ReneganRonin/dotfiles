@@ -1,13 +1,13 @@
 {
     "layer": "top",
     "position": "top",
-    "modules-left": ["custom/media", "sway/workspaces"],
-	"modules-center": ["wlr/taskbar"],
-    "modules-right": ["idle_inhibitor", "backlight","custom/keyboard", "network", "battery", "pulseaudio","tray",  "clock", "custom/quit"],
+    "modules-left": ["sway/workspaces", "custom/workspaces"],
+	"modules-center": ["custom/media"],
+    "modules-right": ["idle_inhibitor", "backlight", "wlr/taskbar", "network", "battery", "pulseaudio","tray",  "clock", "custom/quit"],
     "clock": {
         "format": "{:%H:%M}",
         "format-alt": "{:%a %b %d}",
-        "tooltip": false
+        "tooltip": true
     },
 
 	"sway/workspaces": {
@@ -27,7 +27,7 @@
 			"6": ["eDP-1"],
 			"7": ["eDP-1"],
 			"8": ["eDP-1"],
-		}
+		},
 	},
     "network": {
         "format": "{ifname}",
@@ -37,10 +37,17 @@
         "tooltip-format-wifi": "{signalStrength}%",
         "max-length": 20
     },
+    "custom/workspaces": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/get_workspaces.sh",
+        "exec-if": "pgrep waybar",
+        "restart-interval": 1
+    },
     "custom/media": {
         "format": "{}",
-        "interval": 1,
-        "exec": "$HOME/.config/waybar/get_media.sh"
+        "exec": "$HOME/.config/waybar/get_media.sh",
+        "exec-if": "pgrep spotify",
+        "on-click": "$HOME/.config/waybar/play_pause_media.sh"
     },
     "custom/keyboard": {
         "format": " {}",
@@ -87,6 +94,11 @@
         "on-click": "activate",
         "on-click-right": "minimize",
         "on-click-middle": "close"
+    },
+
+    "sway/window":{
+        "format": "{}",
+        "max-length": 15
     }
     
 }
