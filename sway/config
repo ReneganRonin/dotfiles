@@ -7,8 +7,9 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-exec "systemctl --user import-environment"
+default_border pixel 1
 exec blueman-applet
+exec mako
 exec nm-applet
 exec polkit-dumb-agent
 exec wlsunset -l 8.17 -L 123.80
@@ -21,22 +22,16 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
-# Browser
-set $browser firefox-developer-edition
-# Discord
-set $discord discord-canary
-# File Manager
-set $fileman thunar
+set $term kitty 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/tricks/Pictures/dracula_babe_wallpaper.png fill
+output * bg /usr/share/backgrounds/gnome/Loveles.jpg fill
 #
 # Example configuration:
 #
@@ -49,9 +44,9 @@ output * bg /home/tricks/Pictures/dracula_babe_wallpaper.png fill
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+          timeout 300 'swaylock -f -c 000000' \
+          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -73,6 +68,8 @@ exec swayidle -w \
 
 ### Key bindings
 #
+### Key bindings
+#
 # Basics:
 #
     # Start a terminal
@@ -82,18 +79,22 @@ exec swayidle -w \
     bindsym $mod+Shift+q kill
 
     # Apps
-    bindsym $mod+i exec $browser
-    bindsym $mod+Shift+i exec $discord 
-    bindsym $mod+t exec $fileman
+    bindsym $mod+i exec firefox
+    bindsym $mod+Shift+i exec discord-canary
+    bindsym $mod+t exec thunar
+    bindsym $mod+p exec spotify
 
     # Start your launcher
     bindsym $mod+d exec $menu
     bindsym $mod+u exec /home/tricks/scripts/launcher.sh
     bindsym $mod+0 exec /home/tricks/scripts/powermenu.sh
 
+    bindsym Print exec flameshot full -c -p ~/Pictures/Screenshots/
+    bindsym $mod+Print exec flameshot gui
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
+
 
 #
 # Scratchpad:
@@ -136,5 +137,8 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
+
+include ~/.config/sway/config.d/*
 exec_always ~/.config/waybar/waybar.sh
-include /home/tricks/.config/sway/config.d/*
+#exec_always ~/.config/flameshot/flameshot.sh
+exec_always ~/.config/copyq/copyq.sh
