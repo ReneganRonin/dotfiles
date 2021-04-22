@@ -3,7 +3,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces", "custom/workspaces"],
 	"modules-center": ["custom/media"],
-    "modules-right": ["idle_inhibitor", "backlight", "wlr/taskbar", "network", "battery", "pulseaudio","tray",  "clock", "custom/quit"],
+    "modules-right": ["idle_inhibitor", "backlight", "network", "battery", "pulseaudio","tray",  "clock", "custom/quit"],
     "clock": {
         "format": "{:%H:%M}",
         "format-alt": "{:%a %b %d}",
@@ -47,6 +47,7 @@
         "format": "{}",
         "exec": "$HOME/.config/waybar/get_media.sh",
         "exec-if": "pgrep spotify",
+        "interval": 1,
         "on-click": "$HOME/.config/waybar/play_pause_media.sh"
     },
     "custom/keyboard": {
@@ -93,7 +94,8 @@
         "all-outputs": false,
         "on-click": "activate",
         "on-click-right": "minimize",
-        "on-click-middle": "close"
+        "on-click-middle": "close",
+        "icon-size": 4
     },
 
     "sway/window":{
