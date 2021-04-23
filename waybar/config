@@ -1,12 +1,12 @@
 {
     "layer": "top",
     "position": "top",
-    "modules-left": ["sway/workspaces", "custom/workspaces", "wlr/taskbar"],
+    "modules-left": ["sway/workspaces", "custom/workspaces"],
 	"modules-center": ["custom/media"],
-    "modules-right": ["idle_inhibitor", "backlight", "network", "battery", "pulseaudio","tray",  "clock", "custom/quit"],
+    "modules-right": ["wlr/taskbar", "idle_inhibitor", "backlight", "network", "battery", "pulseaudio","tray",  "clock", "custom/quit"],
     "clock": {
-        "format": "{:%H:%M}",
-        "format-alt": "{:%a %b %d}",
+        "format": " {:%H:%M}",
+        "format-alt": " {:%a %b %d}",
         "tooltip": true
     },
 
@@ -91,11 +91,16 @@
     },
 
     "wlr/taskbar": {
+        "format": "{icon}",
         "all-outputs": false,
         "on-click": "activate",
         "on-click-right": "minimize",
         "on-click-middle": "close",
-        "icon-size": 23
+        "icon-size": 16,
+        "icon-theme": "Papirus",
+        "ignore-list": [
+        "Spotify"
+        ]
     },
 
     "sway/window":{

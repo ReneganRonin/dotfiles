@@ -203,7 +203,8 @@ window#waybar.hidden {
 
 #taskbar button.active {
     background: #ffffff;
-    border-radius: 50%;
+    margin: 0px 1px 0px 1px;
+    border-radius: 30%;
 }
 
 /*#taskbar button:hover {*/
