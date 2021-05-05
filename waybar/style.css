@@ -20,7 +20,7 @@ window#waybar.hidden {
 #workspaces button#sway-workspace-1 {
     background-color: #ffbe26;
     color: #ffffff;
-    margin: 3px 3px 3px 0px;
+    margin: 3px 0px 3px 3px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 5px 5px 5px 7px;
@@ -35,29 +35,33 @@ window#waybar.hidden {
 }
 
 #workspaces button#sway-workspace-3 {
-    background-color: #26a8ff;
+    background-color: #f069c5;
     color: #ffffff;
-    margin: 3px 3px 3px 0px;
+
+    margin: 3px 0px 3px 3px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 5px 5px 5px 7px;
 }
+
 #workspaces button#sway-workspace-4 {
-    background-color: #f069c5;
+    background-color: #26a8ff;
     color: #ffffff;
   	margin: 3px 3px 3px 0px;
   	padding: 5px 7px 5px 5px;
   	border-top-right-radius: 10px;
   	border-bottom-right-radius: 10px;
 }
+
 #workspaces button#sway-workspace-5 {
     background-color: #7d5999;
     color: #ffffff;
-    margin: 3px 3px 3px 0px;
+    margin: 3px 0px 3px 3px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 5px 5px 5px 7px;
 }
+
 #workspaces button#sway-workspace-6 {
     background-color: #bed4d1;
     color: #454545;
@@ -69,14 +73,14 @@ window#waybar.hidden {
 #workspaces button#sway-workspace-7 {
     background-color: #454545;
     color: #ffffff;
-    margin: 3px 3px 3px 0px;
+    margin: 3px 0px 3px 3px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 5px 5px 5px 7px;
 }
 #workspaces button#sway-workspace-8 {
-    background-color: #d4bebe;
-    color: #454545;
+    background-color: #1DB954;
+    color: #ffffff;
   	margin: 3px 3px 3px 0px;
   	padding: 5px 7px 5px 5px;
   	border-top-right-radius: 10px;
@@ -89,10 +93,10 @@ window#waybar.hidden {
 #workspaces button.focused#sway-workspace-2 {
     background-color: #a1a1a1;
 }
-#workspaces button.focused#sway-workspace-3 {
+#workspaces button.focused#sway-workspace-4 {
     background-color: #a1a1a1;
 }
-#workspaces button.focused#sway-workspace-4 {
+#workspaces button.focused#sway-workspace-3 {
     background-color: #a1a1a1;
 }
 #workspaces button.focused#sway-workspace-5 {

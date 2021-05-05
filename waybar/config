@@ -15,8 +15,9 @@
         "format-icons": {
             "1": " ",
             "2": " ",
-            "3": "ﭮ",
-            "4": ""
+            "3": "",
+            "4": "ﭮ",
+            "8": "",
         },
 		"persistent_workspaces": {
 			"1": ["eDP-1"],
@@ -97,7 +98,7 @@
         "on-click-right": "minimize",
         "on-click-middle": "close",
         "icon-size": 16,
-        "icon-theme": "Papirus",
+        "icon-theme": "Papirus-Dark",
         "ignore-list": [
         "Spotify"
         ]

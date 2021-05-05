@@ -7,12 +7,14 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-default_border pixel 1
+default_border pixel 2
 exec blueman-applet
 exec mako
 exec nm-applet
 exec polkit-dumb-agent
 exec wlsunset -l 8.17 -L 123.80
+smart_borders no_gaps
+smart_gaps on
 font xft: FantasqueSansMono Nerd Font 10
 font pango: FantasqueSansMono Nerd Font 10
 set $mod Mod4
@@ -31,7 +33,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/gnome/Loveles.jpg fill
+output * bg /usr/share/backgrounds/gnome/Lava.jpg fill
 #
 # Example configuration:
 #
@@ -73,24 +75,29 @@ exec swayidle -w \
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+Return exec $term --title "kitty-dont-assign"
+    bindsym $mod+Shift+Return exec $term --title "sentient-slate"
 
     # Kill focused window
     bindsym $mod+Shift+q kill
 
     # Apps
-    bindsym $mod+i exec firefox
-    bindsym $mod+Shift+i exec discord-canary
+    bindsym $mod+i exec --no-startup-id MOZ_ENABLE_WAYLAND=1 /usr/bin/firefox-beta-bin
+    bindsym $mod+o exec --no-startup-id GDK_BACKEND=wayland brave --enable-features=UseOzonePlatform --ozone-platform=wayland
+    bindsym $mod+Shift+i exec --no-startup-id GDK_BACKEND=x11 discord-canary --enable-features=UseOzonePlatform --ozone-platform=wayland
     bindsym $mod+t exec thunar
-    bindsym $mod+p exec spotify
+    bindsym $mod+p exec --no-startup-id spotify 
 
     # Start your launcher
     bindsym $mod+d exec $menu
     bindsym $mod+u exec /home/tricks/scripts/launcher.sh
     bindsym $mod+0 exec /home/tricks/scripts/powermenu.sh
 
-    bindsym Print exec flameshot full -c -p ~/Pictures/Screenshots/
-    bindsym $mod+Print exec flameshot gui
+    # Grimshot
+    bindsym Print exec wl-copy < $(grimshot save screen); exec notify-send "Grimshot Screen" --expire-time 1000
+    bindsym $mod+Print exec wl-copy < $(grimshot save area); exec notify-send "Grimshot Area" --expire-time 1000
+    bindsym Ctrl+Shift+Print exec wl-copy < $(grimshot save window); exec notify-send "Grimshot Window" --expire-time 10000
+    bindsym Ctrl+Print exec wl-copy < $(grimshot save output); exec notify-send "Grimshot Output" --expire-time 10000
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -111,6 +118,9 @@ exec swayidle -w \
 #
 # Resizing containers:
 #
+
+bindsym $mod+r mode "resize"
+
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -131,7 +141,20 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+
+# Set inner/outer gaps
+gaps inner 5
+gaps outer 3
+
+# Theme colors
+# class                   border  backgr. text    indic.   child_border
+  client.focused          #3bdba1 #52d154 #ffffff #FDF6E3
+  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
+  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
+  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+
+  client.background       #2B2C2B
 
 #
 # Status Bar:
@@ -140,5 +163,12 @@ bindsym $mod+r mode "resize"
 
 include ~/.config/sway/config.d/*
 exec_always ~/.config/waybar/waybar.sh
+exec_always ~/.config/gdkbackend.sh
 #exec_always ~/.config/flameshot/flameshot.sh
 exec_always ~/.config/copyq/copyq.sh
+
+assign [title="sentient-slate"] 2
+assign [app_id="^Firefox"] 1
+assign [app_id="^Brave"] 1
+for_window [class="Spotify"] move to workspace 8
+assign [instance="discord"] 4
