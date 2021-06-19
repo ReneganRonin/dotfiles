@@ -2,7 +2,7 @@
    "layer": "bottom",
 	"height": 32,
 	"width": 1200,
-    "position": "bottom",
+    "position": "top",
     "modules-left": [
         "custom/river-tag-1",
         "custom/river-tag-2",
@@ -15,7 +15,7 @@
         "custom/river-tag-9"
     ],
 	"modules-center": ["custom/media"],
-    "modules-right": ["backlight", "network", "battery", "pulseaudio","tray",  "clock"],
+    "modules-right": ["backlight", "network", "battery", "pulseaudio", "tray", "clock"],
     "clock": {
         "format": " {:%H:%M}",
         "format-alt": " {:%a %b %d}",
@@ -69,8 +69,8 @@
     },
     "network": {
         "format": "{ifname}",
-        "format-wifi": "🌐 {essid}",
-        "format-ethernet": "🌐 {ifname}",
+        "format-wifi": "🌐{essid}",
+        "format-ethernet": "🌐{ifname}",
         "format-disconnected": "😨",
         "tooltip-format-wifi": "{signalStrength}%",
         "max-length": 20
@@ -79,7 +79,7 @@
         "format": " {}",
         "exec": "$HOME/.config/waybar/get_media.sh",
 	"interval": 1,
-	"exec-if": "pgrep spotifyd",
+	"exec-if": "pgrep -x spotifyd",
         "on-click": "$HOME/.config/waybar/play_pause_media.sh",
 	"min-length": 20,
 	"max-length": 50
@@ -93,10 +93,10 @@
         "format-icons": ["🔅","🔆"],
         "on-scroll-up": "xbacklight -inc 1",
         "on-scroll-down": "xbacklight -dec 1",
-		"format": "{percent}% {icon}"
+		"format": "{icon}{percent}%"
 	},
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}{volume}%",
         "format-bluetooth": "{icon} {volume}%",
         "format-muted": " ",
         "format-icons": {
@@ -117,29 +117,6 @@
             "activated": "👀",
             "deactivated": "🙈"
         }
-    },
-
-    "custom/quit": {
-        "format": "⏼ ",
-        "on-click": "$HOME/scripts/powermenu.sh"
-    },
-
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "all-outputs": false,
-        "on-click": "activate",
-        "on-click-right": "minimize",
-        "on-click-middle": "close",
-        "icon-size": 15,
-        "icon-theme": ["Papirus"],
-        "ignore-list": [
-        "Spotify"
-        ]
-    },
-
-    "sway/window":{
-        "format": "{}",
-        "max-length": 15
-    },
+    }
 }
 
