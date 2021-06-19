@@ -1,8 +1,8 @@
 * {
-  font-size: 14px;
+  font-size: 12px;
   border: none;
-  border-radius: 0;
-  font-family: "FantasqueSansMono Nerd Font";
+  border-radius: 0px;
+  font-family: "Hasklug Nerd Font";
   min-height: 0px;
 }
 
@@ -81,10 +81,8 @@ window#waybar.hidden {
 #workspaces button#sway-workspace-8 {
     background-color: #1DB954;
     color: #ffffff;
-  	margin: 3px 3px 3px 0px;
+  	margin: 3px 0px 3px 0px;
   	padding: 5px 7px 5px 5px;
-  	border-top-right-radius: 10px;
-  	border-bottom-right-radius: 10px;
 }
 
 #workspaces button.focused#sway-workspace-1 {
@@ -114,6 +112,33 @@ window#waybar.hidden {
     color: #ffffff;
 }
 
+
+#tags button {
+    background-color: #ffbe26;
+    color: #ffffff;
+    margin: 3px 0px 3px 3px;
+	border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+
+#tags button.occupied {
+    background-color: #c873fa;
+    color: #ffffff;
+    margin: 3px 0px 3px 3px;
+	border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+
+#tags button.focused {
+    background-color: #83fc85;
+    color: #000000;
+    margin: 3px 0px 3px 3px;
+	border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
 #battery {
   margin: 3px 0px 3px 0px;
   background: #1d1f21;
@@ -126,8 +151,8 @@ window#waybar.hidden {
   padding: 5px 7px 5px 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: #639aeb;
-  color: #FFF;
+  background: #eff582;
+  color: #000000;
 }
 #custom-quit {
   margin: 3px 3px 3px 0px;
@@ -158,9 +183,10 @@ window#waybar.hidden {
 
 #custom-media {
   margin: 3px 3px 3px 0px;
-  padding: 5px 7px 5px 5px;
-  border-radius: 10px;
-  background: #81b71a;
+  padding: 5px 7px 5px 3px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #1DB954;
   color: #ffffff;
 }
 
@@ -173,14 +199,14 @@ window#waybar.hidden {
 #pulseaudio {
   margin: 3px 3px 3px 0px;
   padding: 5px 7px 5px 5px;
-  background: #10cc5f;
+  background: #ff8787;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   color: #ffffff;
 }
 
 #network {
-  background: #ff9900;
+  background: #ffc32b;
   color: #ffffff;
   margin: 3px 0px 3px 0px;
   padding: 5px;
@@ -217,7 +243,7 @@ window#waybar.hidden {
 /*}*/
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
+    background-color: #000000;
     color: #2d3436;
 }
 

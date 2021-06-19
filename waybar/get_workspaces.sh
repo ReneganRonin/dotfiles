@@ -1,9 +1,10 @@
+#!/usr/bin/env dash
 workspace=$(swaymsg -t get_workspaces | jq -r '.[] | select(.focused)' | jq -r '.name')
 binding_status=$(swaymsg -t get_binding_state | jq -r '.name')
-if [[ $binding_status == "resize" ]]
+if $binding_status == "resize";
 then
-    echo -e "視 Resize mode"
+    echo "視 Resize mode"
 else
-    echo -e "  Workspace $workspace"
+    echo "  Workspace $workspace"
 fi
 

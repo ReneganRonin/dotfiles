@@ -1,0 +1,82 @@
+* {
+  font-size: 13px;
+  border: none;
+  border-radius: 0px;
+  font-family: "Hasklug Nerd Font";
+  min-height: 0px;
+}
+
+window#waybar {
+    background: #282a36;
+    color:  #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#custom-river-tag-1 {
+    color: #ffffff;
+    padding: 7px;
+}
+#custom-river-tag-2 {
+    color: #ffffff;
+    padding: 7px;
+}
+#custom-river-tag-3 {
+    color: #ffffff;
+    padding: 7px;
+}
+#custom-river-tag-4 {
+    color: #ffffff;
+    padding: 7px;
+}
+#custom-river-tag-5 {
+    color: #ffffff;
+    padding: 7px;
+}
+#custom-river-tag-6 {
+    color: #ffffff;
+    padding: 7px;
+}
+#custom-river-tag-7 {
+    color: #ffffff;
+    padding: 7px;
+}
+#custom-river-tag-8 {
+    color: #ffffff;
+    padding: 7px;
+}
+#custom-river-tag-9 {
+    color: #ffffff;
+    padding: 7px;
+}
+
+#battery {
+  padding: 7px;
+  color: #c5c8c6;
+}
+
+#backlight {
+  padding: 7px;
+  color: #ffffff;
+}
+#custom-quit {
+  padding: 7px;
+  color: #ffffff;
+}
+
+#clock {
+  padding: 7px;
+}
+#pulseaudio {
+  padding: 7px;
+  color: #ffffff;
+}
+
+#network {
+  color: #ffffff;
+  padding: 7px;
+}

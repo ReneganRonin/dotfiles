@@ -3,34 +3,70 @@
 	"height": 32,
 	"width": 1200,
     "position": "bottom",
-    "modules-left": ["river/tags", "sway/workspaces", "custom/media", "custom/workspaces"],
-    "modules-right": ["wlr/taskbar", "idle_inhibitor", "backlight", "network", "battery", "pulseaudio","tray",  "clock"],
+    "modules-left": [
+        "custom/river-tag-1",
+        "custom/river-tag-2",
+        "custom/river-tag-3",
+        "custom/river-tag-4",
+        "custom/river-tag-5",
+        "custom/river-tag-6",
+        "custom/river-tag-7",
+        "custom/river-tag-8",
+        "custom/river-tag-9"
+    ],
+	"modules-center": ["custom/media"],
+    "modules-right": ["backlight", "network", "battery", "pulseaudio","tray",  "clock"],
     "clock": {
         "format": " {:%H:%M}",
         "format-alt": " {:%a %b %d}",
         "tooltip": true
     },
 
-	"sway/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "1": "",
-            "2": "",
-            "3": " ",
-            "4": "",
-            "8": "",
-        },
-		"persistent_workspaces": {
-			"1": ["eDP-1"],
-			"2": ["eDP-1"],
-			"3": ["eDP-1"],
-			"4": ["eDP-1"],
-			"5": ["eDP-1"],
-			"6": ["eDP-1"],
-			"7": ["eDP-1"],
-			"8": ["eDP-1"],
-		},
-	},
+    "custom/river-tag-1": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 1",
+        "tooltip": false
+    },
+    "custom/river-tag-2": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 2",
+        "tooltip": false
+    },
+    "custom/river-tag-3": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 4",
+        "tooltip": false
+    },
+    "custom/river-tag-4": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 8",
+        "tooltip": false
+    },
+    "custom/river-tag-5": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 16",
+        "tooltip": false
+    },
+    "custom/river-tag-6": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 32",
+        "tooltip": false
+    },
+    "custom/river-tag-7": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 64",
+        "tooltip": false
+    },
+    "custom/river-tag-8": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 128",
+        "tooltip": false
+    },
+    "custom/river-tag-9": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 256",
+        "tooltip": false
+    },
     "network": {
         "format": "{ifname}",
         "format-wifi": "🌐 {essid}",
@@ -39,14 +75,8 @@
         "tooltip-format-wifi": "{signalStrength}%",
         "max-length": 20
     },
-    "custom/workspaces": {
-        "format": "{}",
-        "exec": "$HOME/.config/waybar/get_workspaces.sh",
-        "exec-if": "pgrep waybar",
-        "interval": 1
-    },
     "custom/media": {
-        "format": "{}",
+        "format": " {}",
         "exec": "$HOME/.config/waybar/get_media.sh",
 	"interval": 1,
 	"exec-if": "pgrep spotifyd",
@@ -111,9 +141,5 @@
         "format": "{}",
         "max-length": 15
     },
-	"river/tags":{
-		"num-tags": 5
-	}
-    
 }
 

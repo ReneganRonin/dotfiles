@@ -1,4 +1,5 @@
-player_status=$(playerctl status)
+#!/usr/bin/env bash
+player_status=$(playerctl -p spotifyd status)
 if [[ $player_status = "Paused" ]]
 then
     playerctl play
