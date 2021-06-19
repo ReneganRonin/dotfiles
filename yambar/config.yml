@@ -1,0 +1,31 @@
+bar:
+  height: 30
+  location: top
+  background: 282a36BB
+  font: "Hasklug Nerd Font:size=12"
+
+  right:
+    - clock:
+        content:
+          - string: {text: , font: "Hasklug Nerd Font:size=15"}
+          - string: {text: " {date}", right-margin: 5}
+          - string: {text: , font: "Hasklug Nerd Font:size=15"}
+          - string: {text: " {time}", right-margin: 5}
+    - backlight:
+        name: intel_backlight
+        content:
+          - string: {on-click: "xbacklight -dec 10", text: , font: "Hasklug Nerd Font:size=15"}
+          - string: {text: "{percent}%"}
+          - string: {on-click: "xbacklight -inc 10", text: , font: "Hasklug Nerd Font:size=15"}
+  left:
+    - label:
+        content:
+          - string: {on-click: "riverctl set-focused-tags 1", text: "", font: "Hasklug Nerd Font:size=15", left-margin: 10} 
+          - string: {on-click: "riverctl set-focused-tags 2", text: "", font: "Hasklug Nerd Font:size=15", left-margin: 10} 
+          - string: {on-click: "riverctl set-focused-tags 4", text: "", font: "Hasklug Nerd Font:size=15", left-margin: 10} 
+          - string: {on-click: "riverctl set-focused-tags 8", text: "", font: "Hasklug Nerd Font:size=15", left-margin: 10} 
+          - string: {on-click: "riverctl set-focused-tags 16", text: "", font: "Hasklug Nerd Font:size=15", left-margin: 10} 
+          - string: {on-click: "riverctl set-focused-tags 32", text: "", font: "Hasklug Nerd Font:size=15", left-margin: 10} 
+          - string: {on-click: "riverctl set-focused-tags 64", text: "", font: "Hasklug Nerd Font:size=15", left-margin: 10} 
+          - string: {on-click: "riverctl set-focused-tags 128", text: "", font: "Hasklug Nerd Font:size=15", left-margin: 10} 
+          - string: {on-click: "riverctl set-focused-tags 256", text: "", font: "Hasklug Nerd Font:size=15", left-margin: 10} 
