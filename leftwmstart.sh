@@ -1,4 +1,4 @@
-#!/usr/bin/env dash
+#!/usr/bin/env bash
 
 export XDG_CURRENT_DESKTOP=leftwm
 export MOZ_ENABLE_WAYLAND=0
@@ -14,7 +14,4 @@ if test -z "${XDG_RUNTIME_DIR}"; then
 fi
 
 # Start leftwm
-if test -f /usr/bin/leftwm ; then
-	startx
-fi
-
+startx

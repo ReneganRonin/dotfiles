@@ -71,9 +71,9 @@
         "format": "{ifname}",
         "format-wifi": "🌐{essid}",
         "format-ethernet": "🌐{ifname}",
-        "format-disconnected": "😨",
+        "format-disconnected": "😨 Network unavailable",
         "tooltip-format-wifi": "{signalStrength}%",
-        "max-length": 20
+        "max-length": 30
     },
     "custom/media": {
         "format": " {}",

@@ -4,19 +4,19 @@ env:
 
 font:
   normal:
-    family: FantasqueSansMono Nerd Font
-    style: normal
+    family: LiterationMono Nerd Font Mono
+    style: Book
   bold:
-    family: FantasqueSansMono Nerd Font
+    family: LiterationMono Nerd Font
     style: Bold
   italic:
-    family: FantasqueSansMono Nerd Font
+    family: LiterationMono Nerd Font
     style: Italic
   bold_italic:
-    family: FantasqueSansMono Nerd Font
+    family: LiterationMono Nerd Font
     style: Bold Italic
 
-  size: 10
+  size: 11
 
 draw_bold_text_with_bright_colors: true
 
@@ -80,7 +80,7 @@ colors:
     cyan:    '0x59dffc'
     white:   '0xe6e6d1'
 
-background_opacity: 0.95
+background_opacity: 0.65
 
 selection:
   semantic_escape_chars: ',│`|:"'' ()[]{}<>'

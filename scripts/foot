@@ -1,0 +1,8 @@
+#!/bin/sh
+echo $@
+if ! test -e "${XDG_RUNTIME_DIR}/foot-${WAYLAND_DISPLAY}.sock";
+then
+    /bin/foot "$@"
+else
+    /bin/footclient "$@"
+fi

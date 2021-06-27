@@ -1,21 +1,25 @@
-font=FantasqueSansMono Nerd Font 10
+font=LiterationMono Nerd Font 13
+default-timeout=5000
 
 [urgency=low]
-border-color=#00f704
+background-color=#282a36
+border-color=#f8f8f2
+text-color=#f8f8f2
 
 [urgency=normal]
-border-color=#d08770
-font=FantasqueSansMono Nerd Font 10
+background-color=#282a36
+border-color=#f1fa8c
+text-color=#f1fa8c
 
 [urgency=high]
-background-color=#bf616a
-border-color=#bf616a
-default-timeout=0
+background-color=#282a36
+border-color=#ff6e6e
+text-color=#ff6e6e
 
 [app-name="Spotify"]
-background-color=#000000
+background-color=#282a36
 border-color=#00f74e
 
-[app-name="Firefox Developer Edition"]
-background-color=#000000
-border-color=#6b00f7
+[app-name="Firefox"]
+background-color=#282a36
+border-color=#ff796c
