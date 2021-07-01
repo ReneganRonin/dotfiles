@@ -23,7 +23,7 @@
     },
 
     "custom/river-tag-1": {
-        "format": "",
+        "format": "ﳐ",
         "on-click": "riverctl set-focused-tags 1",
         "tooltip": false
     },
@@ -96,7 +96,7 @@
 		"format": "{icon}{percent}%"
 	},
     "pulseaudio": {
-        "format": "{icon}{volume}%",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
         "format-muted": " ",
         "format-icons": {

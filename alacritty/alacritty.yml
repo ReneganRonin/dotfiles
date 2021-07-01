@@ -4,19 +4,19 @@ env:
 
 font:
   normal:
-    family: LiterationMono Nerd Font Mono
-    style: Book
+    family: SauceCodePro Nerd Font
+    style: Regular
   bold:
-    family: LiterationMono Nerd Font
+    family: SauceCodePro Nerd Font
     style: Bold
   italic:
-    family: LiterationMono Nerd Font
+    family: SauceCodePro Nerd Font
     style: Italic
   bold_italic:
-    family: LiterationMono Nerd Font
+    family: SauceCodePro Nerd Font
     style: Bold Italic
 
-  size: 11
+  size: 10
 
 draw_bold_text_with_bright_colors: true
 

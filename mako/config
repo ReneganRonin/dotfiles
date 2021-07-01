@@ -1,6 +1,7 @@
-font=LiterationMono Nerd Font 13
+font=LiterationMono Nerd Font 10
 default-timeout=5000
-
+border-radius=4
+border-size=1
 [urgency=low]
 background-color=#282a36
 border-color=#f8f8f2

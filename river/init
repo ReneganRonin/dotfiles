@@ -15,11 +15,12 @@ term="foot"
 riverctl map normal $mod+Shift Return zoom
 # App Bindings
 riverctl map normal $mod I spawn firefox
+riverctl map normal $mod+Shift I spawn nyxt
 riverctl map normal $mod O spawn chromium
 riverctl map normal $mod U spawn "fuzzel -i Papirus -f 'Hasklug Nerd Font' --background=30374fFF -t ffffffFF -w 60 --selection-color 998db5ff"
 riverctl spawn "river-tag-overlay --background-colour 0x30374f --square-active-occupied-colour 0x918acf --square-active-background-colour 0x56527a --square-active-border-colour 0x56527a"
 riverctl map normal "None" Print spawn "fish -c grimshot"
-riverctl map normal $mod+Shift Print spawn "fish -c grimarea"
+riverctl map normal $mod Print spawn "fish -c grimarea"
 riverctl spawn ~/swaybg.sh
 riverctl spawn "sleep 5; copyq"
 riverctl spawn "sleep 5; blueman-applet"

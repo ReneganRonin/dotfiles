@@ -16,4 +16,4 @@ if test -z "${XDG_RUNTIME_DIR}"; then
 fi
 exec /usr/libexec/polkit-gnome-authentication-agent-1 &
 # Start river
-exec river
+exec dbus-launch river
